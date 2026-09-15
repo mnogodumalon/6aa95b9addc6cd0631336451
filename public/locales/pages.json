@@ -1,0 +1,41 @@
+{
+  "pages": {
+    "en": {
+      "Abgeschlossene Termine können nicht verschoben werden": "Completed appointments cannot be rescheduled",
+      "Alle Rezepte sind aktuell": "All prescriptions are up to date",
+      "Alle heutigen Termine sind bestätigt.": "All of today's appointments are confirmed.",
+      "Als erschienen markieren": "Mark as appeared",
+      "Behandler anlegen": "Add practitioner",
+      "Bestätigen": "Confirm",
+      "Dauer geändert": "Duration changed",
+      "Diese Woche": "This week",
+      "Erschienen": "Appeared",
+      "Ersten Patienten anlegen": "Add first patient",
+      "Geplant": "Scheduled",
+      "Heute": "Today",
+      "Heute keine Termine geplant": "No appointments scheduled today",
+      "Heute unbestätigt": "Unconfirmed today",
+      "Heute {0} Termine — u.a. {1}": "Today {0} appointments — incl. {1}",
+      "Keine aktiven Rezepte": "No active prescriptions",
+      "Lege zunächst Behandler und Patienten an, dann kannst du Termine vergeben.": "First add practitioners and patients, then you can schedule appointments.",
+      "Neuer Termin": "New appointment",
+      "Neues Rezept": "New prescription",
+      "Offene Rezepte": "Open prescriptions",
+      "Patient unbekannt": "Patient unknown",
+      "Praxis einrichten": "Set up practice",
+      "Rezepte laufen bald ab": "Prescriptions expiring soon",
+      "Termin verschoben": "Appointment rescheduled",
+      "Uhr": "o'clock",
+      "Unbekannt": "Unknown",
+      "Unbestätigt": "Unconfirmed",
+      "bis": "until",
+      "haben Termine ohne Status-Rückmeldung.": "have appointments without a status response.",
+      "hat einen Termin ohne Status-Rückmeldung.": "has an appointment without a status response.",
+      "{0} aktive Rezepte, keines läuft in 5 Tagen ab": "{0} active prescriptions, none expiring within 5 days",
+      "{0} — bestätigt": "{0} — confirmed",
+      "{0} — erschienen": "{0} — appeared",
+      "Öffnen": "Open"
+    }
+  },
+  "v": 1
+}

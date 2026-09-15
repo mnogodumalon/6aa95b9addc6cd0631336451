@@ -1,0 +1,28 @@
+Physiotherapie Praxis Bewegt:
+
+Wir sind eine Physiotherapie-Praxis mit drei Behandlern und einer Empfangskraft und brauchen eine Anwendung für Patienten, Termine, Behandlungen und Rezepte.
+
+Wer damit arbeitet:
+- Empfang: legt Patienten an, vergibt Termine, erfasst Rezepte, sieht alle Termine aller Behandler
+- Behandler: sehen nur ihre eigenen Termine und Patienten, dokumentieren Behandlungen
+- Praxisleitung: sieht alles, pflegt Leistungen und Preise
+
+Patienten
+Vorname, Nachname, Geburtsdatum, Telefon, E-Mail, Adresse, Krankenkasse, Versichertennummer, Versicherungsart (gesetzlich / privat / Selbstzahler), Hausarzt, Notizen (vertraulich, nur Behandler und Leitung).
+
+Behandler
+Vorname, Nachname, Kürzel, Fachgebiete (Mehrfachauswahl: Manuelle Therapie, Krankengymnastik, Lymphdrainage, Massage, Sportphysio), Arbeitstage (Mehrfachauswahl Mo–Fr), Status (aktiv / Urlaub / krank), E-Mail.
+
+Leistungen
+Bezeichnung, Heilmittelkürzel (z. B. KG, MT, MLD), Dauer in Minuten, Preis Kasse, Preis privat.
+
+Rezepte
+Patient, Ausstellungsdatum, Verordnende Arztpraxis, Diagnose, Leistung, Anzahl verordnete Einheiten, Frequenz pro Woche, Gültig bis, Status (Offen / In Behandlung / Abgeschlossen / Abgelaufen). Ein Rezept gilt für genau einen Patienten.
+
+Termine
+Patient, Behandler, Rezept (optional), Datum, Beginn, Ende, Raum (Raum 1 / Raum 2 / Raum 3 / Geräteraum), Status (Geplant / Bestätigt / Erschienen / Nicht erschienen / Abgesagt), Bemerkung. Ein Behandler kann zur selben Zeit nur einen Termin haben, ein Raum auch.
+
+Behandlungen
+Termin, Patient, Behandler, Durchgeführte Leistung, Dauer tatsächlich, Befund (vertraulich), Maßnahmen, Verlauf, Nächste Schritte. Pro Termin genau eine Behandlung. Mit jeder dokumentierten Behandlung wird eine Einheit des Rezepts verbraucht.
+
+Wichtig: Jede Beziehung soll nur in einer Richtung gespeichert werden. Der Termin kennt Patient, Behandler und Rezept, die Behandlung kennt ihren Termin, das Rezept kennt seinen Patienten. Bitte keine Listenfelder in der Gegenrichtung anlegen.

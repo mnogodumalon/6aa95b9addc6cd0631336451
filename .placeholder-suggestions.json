@@ -1,0 +1,63 @@
+{
+  "BehandlerDialog.tsx": {
+    "vorname": "z. B. Max",
+    "nachname": "z. B. Müller",
+    "kuerzel": "z. B. MM",
+    "fachgebiete": "Fachgebiete wählen",
+    "arbeitstage": "Werktage wählen",
+    "status": "Aktueller Status",
+    "email": "z. B. max@praxis.de"
+  },
+  "PatientenDialog.tsx": {
+    "vorname": "z. B. Anna",
+    "nachname": "z. B. Schmidt",
+    "geburtsdatum": "Wann wurde der Patient geboren?",
+    "telefon": "z. B. 030 12345678",
+    "email": "z. B. patient@example.de",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "krankenkasse": "z. B. AOK Bayern",
+    "versichertennummer": "z. B. 123456789",
+    "versicherungsart": "Welche Versicherung?",
+    "hausarzt": "z. B. Dr. Hans Weber"
+  },
+  "LeistungenDialog.tsx": {
+    "bezeichnung": "z. B. Krankengymnastik",
+    "heilmittelkuerzel": "z. B. KG",
+    "dauer_minuten": "z. B. 30",
+    "preis_kasse": "z. B. 45,50",
+    "preis_privat": "z. B. 55,00"
+  },
+  "RezepteDialog.tsx": {
+    "patient": "Welcher Patient?",
+    "ausstellungsdatum": "Wann ausgestellt?",
+    "arztpraxis": "z. B. Praxis Dr. Weber",
+    "diagnose": "Diagnose und Indikation...",
+    "leistung": "Welche Leistung verordnet?",
+    "anzahl_einheiten": "z. B. 6",
+    "frequenz_pro_woche": "z. B. 2",
+    "gueltig_bis": "Wann Rezept ungültig?",
+    "status": "Rezeptstatus"
+  },
+  "TermineDialog.tsx": {
+    "patient": "Welcher Patient kommt?",
+    "behandler": "Wer führt Termin durch?",
+    "rezept": "Welches Rezept (optional)?",
+    "beginn": "Wann startet die Behandlung?",
+    "ende": "Wann endet die Behandlung?",
+    "raum": "In welchem Raum?",
+    "status": "Aktueller Status",
+    "bemerkung": "Besonderheiten, Notizen..."
+  },
+  "BehandlungenDialog.tsx": {
+    "termin": "Welcher Termin?",
+    "durchgefuehrte_leistung": "Welche Leistung erbracht?",
+    "dauer_tatsaechlich": "z. B. 25",
+    "befund": "Befunddokumentation...",
+    "massnahmen": "Durchgeführte Maßnahmen...",
+    "verlauf": "Wie ist der Patient?",
+    "naechste_schritte": "Nächste therapeutische Schritte..."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Behandler": {
+      "placeholders_set": 7,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Fachgebiete, Arbeitstage, Status). Status hat offene Variante → Default auf 'aktiv'. Keine Preise, keine Datumsabhängigkeiten, keine Berechnungen."
+    },
+    "Patienten": {
+      "placeholders_set": 12,
+      "defaults_keys": ["versicherungsart"],
+      "computed_keys": [],
+      "reason": "Reine Personalstammdaten. Versicherungsart mit Optionen → Default auf 'gesetzlich'. Kein Datum-Input (Geburtsdatum ist Vergangenheit), keine Preise, keine Berechnungen."
+    },
+    "Leistungen": {
+      "placeholders_set": 5,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Leistungs-Katalog (Bezeichnung, Kürzel, Dauer, zwei Preise). Alle Felder unabhängige Eingaben. Keine Datenabhängigkeiten, keine Berechnungen zwischen Feldern."
+    },
+    "Rezepte": {
+      "placeholders_set": 9,
+      "defaults_keys": ["ausstellungsdatum", "gueltig_bis", "status"],
+      "computed_keys": ["_rezept_gueltig_tage"],
+      "reason": "Rezept-Erfassung mit Datumspaar (ausstellungsdatum/gueltig_bis → 14 Tage Default). Status mit 'offen' Default. Virtuelle Dauer-Berechnung für Geltungsdauer."
+    },
+    "Termine": {
+      "placeholders_set": 8,
+      "defaults_keys": ["beginn", "ende", "raum", "status"],
+      "computed_keys": ["_termin_dauer_minuten"],
+      "reason": "Terminplanung mit Datumspaar datetimeminute (beginn/ende → Dauer in Minuten). Raum Default (Raum 1), Status Default (Geplant). Dauer-Minuten-Berechnung (hours × 60) für Anzeige."
+    },
+    "Behandlungen": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Behandlungsdokumentation nach Termin (Befund, Maßnahmen, Verlauf, nächste Schritte). Medizinisch dokumentativ, keine Preisberechnung, keine Datenabhängigkeiten."
+    }
+  }
+}
