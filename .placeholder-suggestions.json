@@ -1,0 +1,64 @@
+{
+  "BehandlerDialog.tsx": {
+    "vorname": "z. B. Anna",
+    "nachname": "z. B. Müller",
+    "kuerzel": "z. B. AM",
+    "fachgebiete": "Fachgebiete wählen",
+    "arbeitstage": "Werktage auswählen",
+    "status": "z. B. Aktiv",
+    "email": "name@praxis-bewegt.de"
+  },
+  "PatientenDialog.tsx": {
+    "vorname": "z. B. Peter",
+    "nachname": "z. B. Schmidt",
+    "geburtsdatum": "Wann wurde die Person geboren?",
+    "telefon": "z. B. 030 12345678",
+    "email": "patient@example.com",
+    "strasse": "z. B. Hauptstraße",
+    "hausnummer": "z. B. 42",
+    "plz": "z. B. 10115",
+    "ort": "z. B. Berlin",
+    "krankenkasse": "z. B. Techniker Krankenkasse",
+    "versichertennummer": "z. B. 123456789",
+    "versicherungsart": "Versicherungsart auswählen",
+    "hausarzt": "z. B. Dr. Schmidt",
+    "notizen": "Allergien, Besonderheiten, medizinische Hinweise..."
+  },
+  "LeistungenDialog.tsx": {
+    "bezeichnung": "z. B. Klassische Massage",
+    "heilmittelkuerzel": "z. B. KG",
+    "dauer_minuten": "z. B. 30",
+    "preis_kasse": "z. B. 45,50",
+    "preis_privat": "z. B. 60,00"
+  },
+  "RezepteDialog.tsx": {
+    "patient": "Patient auswählen",
+    "ausstellungsdatum": "Wann wurde das Rezept ausgestellt?",
+    "arztpraxis": "z. B. Dr. Karl Meyer Praxis",
+    "diagnose": "ICD-Code und Diagnosetext",
+    "leistung": "Verordnete Leistung wählen",
+    "anzahl_einheiten": "z. B. 6",
+    "frequenz_pro_woche": "z. B. 2",
+    "gueltig_bis": "Bis wann ist das Rezept gültig?",
+    "status": "Rezept-Status auswählen"
+  },
+  "TermineDialog.tsx": {
+    "patient": "Patient auswählen",
+    "behandler": "Behandler auswählen",
+    "rezept": "Passendes Rezept (optional)",
+    "beginn": "Wann beginnt der Termin?",
+    "ende": "Wann endet der Termin?",
+    "raum": "Behandlungsraum wählen",
+    "status": "Termin-Status auswählen",
+    "bemerkung": "Spezielle Hinweise oder Notizen zum Termin"
+  },
+  "BehandlungenDialog.tsx": {
+    "termin": "Durchgeführter Termin",
+    "durchgefuehrte_leistung": "Tatsächlich erbrachte Leistung",
+    "dauer_tatsaechlich": "z. B. 28",
+    "befund": "Befundbeschreibung, medizinische Beobachtungen...",
+    "massnahmen": "Durchgeführte Maßnahmen, Techniken, Griffe...",
+    "verlauf": "Verlauf der Behandlung während der Sitzung...",
+    "naechste_schritte": "Empfehlungen, Hausaufgaben, nächste Schritte..."
+  }
+}

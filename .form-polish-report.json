@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Behandler": {
+      "placeholders_set": 7,
+      "defaults_keys": ["status"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Vor-/Nachname, Kürzel, Email) mit Klassifizierer-Lookups (Fachgebiete, Arbeitstage). Keine Preise, keine Datumspaar, keine berechenbaren Größen."
+    },
+    "Patienten": {
+      "placeholders_set": 14,
+      "defaults_keys": ["versicherungsart"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Kontakt, Adresse, Versicherung). Keine Preis-Applookup, keine Mengen/Dauer-Paare, keine Aggregation nötig."
+    },
+    "Leistungen": {
+      "placeholders_set": 5,
+      "defaults_keys": ["dauer_minuten", "preis_kasse", "preis_privat"],
+      "computed_keys": [],
+      "reason": "Stammdaten-Katalog für Leistungen. Number-Felder sind Input-Werte für Katalog-Einträge, nicht Berechnungen. Jede Zeile ist isoliert."
+    },
+    "Rezepte": {
+      "placeholders_set": 9,
+      "defaults_keys": ["ausstellungsdatum", "anzahl_einheiten", "frequenz_pro_woche", "status"],
+      "computed_keys": [],
+      "reason": "Therapeutische Verordnung mit Applookup auf Leistung (hat Preis-Felder), aber kein Gesamtbetrag-Feld im Schema und keine Kaufmenge für Multiplikation. Berechnung nicht gewollt/möglich."
+    },
+    "Termine": {
+      "placeholders_set": 7,
+      "defaults_keys": ["beginn", "ende", "status"],
+      "computed_keys": [],
+      "reason": "Zeitfenster mit Datumspaar Beginn/Ende (datetimeminute), keine Number-Felder, keine applookup auf Preise. Dauer-Berechnung nicht vorgesehen."
+    },
+    "Behandlungen": {
+      "placeholders_set": 7,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Dokumentation von durchgeführten Leistungen mit applookup auf Leistungen/Termine. Dauer_tatsaechlich ist Istwert-Input, nicht berechenbar. Kein Mengenfeld für Preis-Multiplikation."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "en": {
+      " ist heute nicht erschienen.": " did not show up today.",
+      " sind heute nicht erschienen.": " did not show up today.",
+      "Alle Rezepte im grünen Bereich": "All prescriptions in the clear",
+      "Alle Termine heute bestätigt": "All appointments today confirmed",
+      "Als ungültig markieren": "Mark as invalid",
+      "Anzeigen": "Show",
+      "Bald ablaufend": "Expiring Soon",
+      "Bestätigen": "Confirm",
+      "Diese Woche": "This Week",
+      "Doppelbelegung mit {0}": "Double booking with {0}",
+      "Erschienen": "Appeared",
+      "Geplant": "Scheduled",
+      "Heute": "Today",
+      "Heute keine Termine geplant.": "No appointments scheduled today.",
+      "Heute ungeklärt": "Unresolved Today",
+      "Heute {0} Termine — u. a. {1}.": "Today {0} appointments — incl. {1}.",
+      "Heute {0} Termine.": "Today {0} appointments.",
+      "Neuen Termin anlegen": "Create New Appointment",
+      "Neuer Termin": "New Appointment",
+      "Nicht erschienen": "Did Not Show",
+      "Offene Rezepte": "Open Prescriptions",
+      "Rezept anlegen": "Create Prescription",
+      "Rezepte laufen ab": "Prescriptions expiring",
+      "Termin": "Appointment",
+      "Termin verschoben auf {0}": "Appointment rescheduled to {0}",
+      "Termin-Dauer angepasst": "Appointment duration adjusted",
+      "Uhr": "o'clock",
+      "Unbekannt": "Unknown",
+      "bis": "until",
+      "{0} — bestätigt": "{0} — confirmed",
+      "{0} — erschienen": "{0} — appeared"
+    }
+  },
+  "v": 1
+}
