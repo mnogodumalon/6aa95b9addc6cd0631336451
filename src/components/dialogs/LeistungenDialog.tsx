@@ -287,7 +287,7 @@ export function LeistungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="bezeichnung">{fieldLabel('leistungen', 'bezeichnung')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="bezeichnung"
-          placeholder="z. B. Klassische Massage"
+          placeholder=""
           value={fields.bezeichnung ?? ''}
           onChange={e => setFields(f => ({ ...f, bezeichnung: e.target.value }))}
           required
@@ -302,7 +302,7 @@ export function LeistungenDialog({ open, onClose, onSubmit, defaultValues, recor
         <Label htmlFor="heilmittelkuerzel">{fieldLabel('leistungen', 'heilmittelkuerzel')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="heilmittelkuerzel"
-          placeholder="z. B. KG"
+          placeholder=""
           value={fields.heilmittelkuerzel ?? ''}
           onChange={e => setFields(f => ({ ...f, heilmittelkuerzel: e.target.value }))}
           required
@@ -321,7 +321,7 @@ export function LeistungenDialog({ open, onClose, onSubmit, defaultValues, recor
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'dauer_minuten')}
-          placeholder="z. B. 30"
+          placeholder=""
           value={fields.dauer_minuten !== undefined ? fields.dauer_minuten : (computedValues['dauer_minuten'] ?? '')}
           onChange={e => setFields(f => ({ ...f, dauer_minuten: clampNumberValue(formEnhancements, 'dauer_minuten', e.target.value) }))}
         />
@@ -339,7 +339,7 @@ export function LeistungenDialog({ open, onClose, onSubmit, defaultValues, recor
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'preis_kasse')}
-          placeholder="z. B. 45,50"
+          placeholder=""
           value={fields.preis_kasse !== undefined ? fields.preis_kasse : (computedValues['preis_kasse'] ?? '')}
           onChange={e => setFields(f => ({ ...f, preis_kasse: clampNumberValue(formEnhancements, 'preis_kasse', e.target.value) }))}
         />
@@ -354,7 +354,7 @@ export function LeistungenDialog({ open, onClose, onSubmit, defaultValues, recor
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'preis_privat')}
-          placeholder="z. B. 60,00"
+          placeholder=""
           value={fields.preis_privat !== undefined ? fields.preis_privat : (computedValues['preis_privat'] ?? '')}
           onChange={e => setFields(f => ({ ...f, preis_privat: clampNumberValue(formEnhancements, 'preis_privat', e.target.value) }))}
         />

@@ -364,7 +364,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="termin">{fieldLabel('behandlungen', 'termin')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="termin"
-          placeholder="Durchgeführter Termin"
+          placeholder=""
           items={termineListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.bemerkung ?? r.record_id),
@@ -384,7 +384,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="durchgefuehrte_leistung">{fieldLabel('behandlungen', 'durchgefuehrte_leistung')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="durchgefuehrte_leistung"
-          placeholder="Tatsächlich erbrachte Leistung"
+          placeholder=""
           items={leistungenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.bezeichnung ?? r.record_id),
@@ -408,7 +408,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'dauer_tatsaechlich')}
-          placeholder="z. B. 28"
+          placeholder=""
           value={fields.dauer_tatsaechlich !== undefined ? fields.dauer_tatsaechlich : (computedValues['dauer_tatsaechlich'] ?? '')}
           onChange={e => setFields(f => ({ ...f, dauer_tatsaechlich: clampNumberValue(formEnhancements, 'dauer_tatsaechlich', e.target.value) }))}
         />
@@ -419,7 +419,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="befund">{fieldLabel('behandlungen', 'befund')}</Label>
         <Textarea
           id="befund"
-          placeholder="Befundbeschreibung, medizinische Beobachtungen..."
+          placeholder=""
           value={fields.befund ?? ''}
           onChange={e => setFields(f => ({ ...f, befund: e.target.value }))}
           rows={3}
@@ -431,7 +431,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="massnahmen">{fieldLabel('behandlungen', 'massnahmen')}</Label>
         <Textarea
           id="massnahmen"
-          placeholder="Durchgeführte Maßnahmen, Techniken, Griffe..."
+          placeholder=""
           value={fields.massnahmen ?? ''}
           onChange={e => setFields(f => ({ ...f, massnahmen: e.target.value }))}
           rows={3}
@@ -443,7 +443,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="verlauf">{fieldLabel('behandlungen', 'verlauf')}</Label>
         <Textarea
           id="verlauf"
-          placeholder="Verlauf der Behandlung während der Sitzung..."
+          placeholder=""
           value={fields.verlauf ?? ''}
           onChange={e => setFields(f => ({ ...f, verlauf: e.target.value }))}
           rows={3}
@@ -455,7 +455,7 @@ export function BehandlungenDialog({ open, onClose, onSubmit, defaultValues, rec
         <Label htmlFor="naechste_schritte">{fieldLabel('behandlungen', 'naechste_schritte')}</Label>
         <Textarea
           id="naechste_schritte"
-          placeholder="Empfehlungen, Hausaufgaben, nächste Schritte..."
+          placeholder=""
           value={fields.naechste_schritte ?? ''}
           onChange={e => setFields(f => ({ ...f, naechste_schritte: e.target.value }))}
           rows={3}

@@ -313,7 +313,7 @@ export function BehandlerDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="vorname">{fieldLabel('behandler', 'vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="vorname"
-          placeholder="z. B. Anna"
+          placeholder=""
           value={fields.vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, vorname: e.target.value }))}
           required
@@ -328,7 +328,7 @@ export function BehandlerDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="nachname">{fieldLabel('behandler', 'nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="nachname"
-          placeholder="z. B. Müller"
+          placeholder=""
           value={fields.nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, nachname: e.target.value }))}
           required
@@ -343,7 +343,7 @@ export function BehandlerDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="kuerzel">{fieldLabel('behandler', 'kuerzel')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="kuerzel"
-          placeholder="z. B. AM"
+          placeholder=""
           value={fields.kuerzel ?? ''}
           onChange={e => setFields(f => ({ ...f, kuerzel: e.target.value }))}
           required
@@ -563,7 +563,7 @@ export function BehandlerDialog({ open, onClose, onSubmit, defaultValues, record
           id="email"
           type="email"
           inputMode="email"
-          placeholder="name@praxis-bewegt.de"
+          placeholder=""
           value={fields.email ?? ''}
           onChange={e => setFields(f => ({ ...f, email: e.target.value }))}
         />

@@ -376,7 +376,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="patient">{fieldLabel('rezepte', 'patient')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="patient"
-          placeholder="Patient auswählen"
+          placeholder=""
           items={patientenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -396,7 +396,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="ausstellungsdatum">{fieldLabel('rezepte', 'ausstellungsdatum')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="ausstellungsdatum"
-          placeholder="Wann wurde das Rezept ausgestellt?"
+          placeholder=""
           mode="date"
           value={fields.ausstellungsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, ausstellungsdatum: v ?? undefined }))}
@@ -412,7 +412,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="arztpraxis">{fieldLabel('rezepte', 'arztpraxis')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="arztpraxis"
-          placeholder="z. B. Dr. Karl Meyer Praxis"
+          placeholder=""
           value={fields.arztpraxis ?? ''}
           onChange={e => setFields(f => ({ ...f, arztpraxis: e.target.value }))}
           required
@@ -427,7 +427,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="diagnose">{fieldLabel('rezepte', 'diagnose')}</Label>
         <Textarea
           id="diagnose"
-          placeholder="ICD-Code und Diagnosetext"
+          placeholder=""
           value={fields.diagnose ?? ''}
           onChange={e => setFields(f => ({ ...f, diagnose: e.target.value }))}
           rows={3}
@@ -439,7 +439,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="leistung">{fieldLabel('rezepte', 'leistung')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="leistung"
-          placeholder="Verordnete Leistung wählen"
+          placeholder=""
           items={leistungenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.bezeichnung ?? r.record_id),
@@ -463,7 +463,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'anzahl_einheiten')}
-          placeholder="z. B. 6"
+          placeholder=""
           value={fields.anzahl_einheiten !== undefined ? fields.anzahl_einheiten : (computedValues['anzahl_einheiten'] ?? '')}
           onChange={e => setFields(f => ({ ...f, anzahl_einheiten: clampNumberValue(formEnhancements, 'anzahl_einheiten', e.target.value) }))}
         />
@@ -481,7 +481,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
           inputMode="decimal"
           step="any"
           {...numberInputProps(formEnhancements, 'frequenz_pro_woche')}
-          placeholder="z. B. 2"
+          placeholder=""
           value={fields.frequenz_pro_woche !== undefined ? fields.frequenz_pro_woche : (computedValues['frequenz_pro_woche'] ?? '')}
           onChange={e => setFields(f => ({ ...f, frequenz_pro_woche: clampNumberValue(formEnhancements, 'frequenz_pro_woche', e.target.value) }))}
         />
@@ -492,7 +492,7 @@ export function RezepteDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="gueltig_bis">{fieldLabel('rezepte', 'gueltig_bis')}</Label>
         <DatePicker
           id="gueltig_bis"
-          placeholder="Bis wann ist das Rezept gültig?"
+          placeholder=""
           mode="date"
           value={fields.gueltig_bis ?? null}
           onChange={v => setFields(f => ({ ...f, gueltig_bis: v ?? undefined }))}

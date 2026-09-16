@@ -406,7 +406,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="patient">{fieldLabel('termine', 'patient')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="patient"
-          placeholder="Patient auswählen"
+          placeholder=""
           items={patientenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -426,7 +426,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="behandler">{fieldLabel('termine', 'behandler')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="behandler"
-          placeholder="Behandler auswählen"
+          placeholder=""
           items={behandlerListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -446,7 +446,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="rezept">{fieldLabel('termine', 'rezept')}</Label>
         <Combobox
           id="rezept"
-          placeholder="Passendes Rezept (optional)"
+          placeholder=""
           items={rezepteListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.arztpraxis ?? r.record_id),
@@ -463,7 +463,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="beginn">{fieldLabel('termine', 'beginn')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="beginn"
-          placeholder="Wann beginnt der Termin?"
+          placeholder=""
           mode="datetime"
           value={fields.beginn ?? null}
           onChange={v => setFields(f => ({ ...f, beginn: v ?? undefined }))}
@@ -479,7 +479,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="ende">{fieldLabel('termine', 'ende')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="ende"
-          placeholder="Wann endet der Termin?"
+          placeholder=""
           mode="datetime"
           value={fields.ende ?? null}
           onChange={v => setFields(f => ({ ...f, ende: v ?? undefined }))}
@@ -632,7 +632,7 @@ export function TermineDialog({ open, onClose, onSubmit, defaultValues, recordId
         <Label htmlFor="bemerkung">{fieldLabel('termine', 'bemerkung')}</Label>
         <Textarea
           id="bemerkung"
-          placeholder="Spezielle Hinweise oder Notizen zum Termin"
+          placeholder=""
           value={fields.bemerkung ?? ''}
           onChange={e => setFields(f => ({ ...f, bemerkung: e.target.value }))}
           rows={3}

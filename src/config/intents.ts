@@ -43,9 +43,9 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
-  { path: '/intents/neuer-termin', label: { de: 'Neuer Termin', en: 'New Appointment' }, icon: IconCalendarPlus, description: 'Termin in 4 Schritten anlegen: Patient, Behandler, Rezept und Zeitslot' },
-  { path: '/intents/behandlung-dokumentieren', label: { de: 'Behandlung dokumentieren', en: 'Document Treatment' }, icon: IconClipboardList, description: 'Behandlung zu einem Termin dokumentieren und Einheit verbuchen' },
-  { path: '/intents/rezept-erfassen', label: { de: 'Rezept erfassen', en: 'Record Prescription' }, icon: IconFileText, description: 'Neues Rezept für einen Patienten erfassen und einer Leistung zuordnen' },
+  { path: '/intents/neuer-termin', label: { de: 'Neuer Termin', en: 'New Appointment' }, icon: IconCalendarPlus, description: { de: 'Termin in 4 Schritten anlegen: Patient, Behandler, Rezept und Zeitslot', en: 'Create an appointment in 4 steps: Patient, Therapist, Prescription, and Time Slot' } },
+  { path: '/intents/behandlung-dokumentieren', label: { de: 'Behandlung dokumentieren', en: 'Document Treatment' }, icon: IconClipboardList, description: { de: 'Behandlung zu einem Termin dokumentieren und Einheit verbuchen', en: 'Document treatment for an appointment and post a unit' } },
+  { path: '/intents/rezept-erfassen', label: { de: 'Rezept erfassen', en: 'Record Prescription' }, icon: IconFileText, description: { de: 'Neues Rezept für einen Patienten erfassen und einer Leistung zuordnen', en: 'Record a new prescription for a patient and assign it to a service' } },
   // </custom:intents>
 ];
 
@@ -65,5 +65,5 @@ export const INTENTS_PENDING = false;
  * pulsing "werden erstellt …" in every deployed Phase-1 bundle forever — no
  * code path redeploys Phase 1 without the flag (live 03.09.2026).
  */
-export const INTENTS_PENDING_SINCE: string | null = '2026-09-16T08:46:14+00:00';
+export const INTENTS_PENDING_SINCE: string | null = null;
 export const PENDING_MAX_MINUTES = 30;

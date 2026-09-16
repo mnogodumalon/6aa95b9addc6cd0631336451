@@ -310,7 +310,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="vorname">{fieldLabel('patienten', 'vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="vorname"
-          placeholder="z. B. Peter"
+          placeholder=""
           value={fields.vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, vorname: e.target.value }))}
           required
@@ -325,7 +325,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="nachname">{fieldLabel('patienten', 'nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="nachname"
-          placeholder="z. B. Schmidt"
+          placeholder=""
           value={fields.nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, nachname: e.target.value }))}
           required
@@ -340,7 +340,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="geburtsdatum">{fieldLabel('patienten', 'geburtsdatum')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="geburtsdatum"
-          placeholder="Wann wurde die Person geboren?"
+          placeholder=""
           mode="date"
           value={fields.geburtsdatum ?? null}
           onChange={v => setFields(f => ({ ...f, geburtsdatum: v ?? undefined }))}
@@ -358,7 +358,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
           id="telefon"
           type="tel"
           inputMode="tel"
-          placeholder="z. B. 030 12345678"
+          placeholder=""
           value={fields.telefon ?? ''}
           onChange={e => setFields(f => ({ ...f, telefon: e.target.value }))}
         />
@@ -371,7 +371,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
           id="email"
           type="email"
           inputMode="email"
-          placeholder="patient@example.com"
+          placeholder=""
           value={fields.email ?? ''}
           onChange={e => setFields(f => ({ ...f, email: e.target.value }))}
         />
@@ -382,7 +382,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="strasse">{fieldLabel('patienten', 'strasse')}</Label>
         <Input
           id="strasse"
-          placeholder="z. B. Hauptstraße"
+          placeholder=""
           value={fields.strasse ?? ''}
           onChange={e => setFields(f => ({ ...f, strasse: e.target.value }))}
         />
@@ -393,7 +393,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="hausnummer">{fieldLabel('patienten', 'hausnummer')}</Label>
         <Input
           id="hausnummer"
-          placeholder="z. B. 42"
+          placeholder=""
           value={fields.hausnummer ?? ''}
           onChange={e => setFields(f => ({ ...f, hausnummer: e.target.value }))}
         />
@@ -404,7 +404,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="plz">{fieldLabel('patienten', 'plz')}</Label>
         <Input
           id="plz"
-          placeholder="z. B. 10115"
+          placeholder=""
           value={fields.plz ?? ''}
           onChange={e => setFields(f => ({ ...f, plz: e.target.value }))}
         />
@@ -415,7 +415,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="ort">{fieldLabel('patienten', 'ort')}</Label>
         <Input
           id="ort"
-          placeholder="z. B. Berlin"
+          placeholder=""
           value={fields.ort ?? ''}
           onChange={e => setFields(f => ({ ...f, ort: e.target.value }))}
         />
@@ -426,7 +426,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="krankenkasse">{fieldLabel('patienten', 'krankenkasse')}</Label>
         <Input
           id="krankenkasse"
-          placeholder="z. B. Techniker Krankenkasse"
+          placeholder=""
           value={fields.krankenkasse ?? ''}
           onChange={e => setFields(f => ({ ...f, krankenkasse: e.target.value }))}
         />
@@ -437,7 +437,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="versichertennummer">{fieldLabel('patienten', 'versichertennummer')}</Label>
         <Input
           id="versichertennummer"
-          placeholder="z. B. 123456789"
+          placeholder=""
           value={fields.versichertennummer ?? ''}
           onChange={e => setFields(f => ({ ...f, versichertennummer: e.target.value }))}
         />
@@ -497,7 +497,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="hausarzt">{fieldLabel('patienten', 'hausarzt')}</Label>
         <Input
           id="hausarzt"
-          placeholder="z. B. Dr. Schmidt"
+          placeholder=""
           value={fields.hausarzt ?? ''}
           onChange={e => setFields(f => ({ ...f, hausarzt: e.target.value }))}
         />
@@ -508,7 +508,7 @@ export function PatientenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="notizen">{fieldLabel('patienten', 'notizen')}</Label>
         <Textarea
           id="notizen"
-          placeholder="Allergien, Besonderheiten, medizinische Hinweise..."
+          placeholder=""
           value={fields.notizen ?? ''}
           onChange={e => setFields(f => ({ ...f, notizen: e.target.value }))}
           rows={3}

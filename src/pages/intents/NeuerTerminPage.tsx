@@ -74,7 +74,7 @@ export default function NeuerTerminPage() {
   });
 
   const behandler = useRecordSearch(servicePort, 'behandler', {
-    filter: "r.v_status == 'aktiv'",
+    filter: "r.v_status == 'aktiv'", /* i18n-exempt */
     where: r => fieldLookup(r, 'status')?.key === 'aktiv',
     searchFields: ['vorname', 'nachname', 'kuerzel'],
     toItem: b => ({

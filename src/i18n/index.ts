@@ -340,6 +340,7 @@ export const UI_CATALOG: Record<CoreLocale, Record<string, string>> = {
     "ppa_can_submit": "Einträge absenden",
     "ppa_can_view": "diese Daten sehen",
     "ppa_cannot_line": "bestehende Daten sehen oder ändern.",
+    "ppa_cannot_change_line": "bestehende Daten ändern oder löschen.",
     "ppa_cancel": "Abbrechen",
     "ppa_confirm_publish": "Veröffentlichen",
     "ps_preview_banner": "Vorschau — nur du siehst diese Seite. Absenden legt einen echten Eintrag an.",
@@ -399,6 +400,9 @@ export const UI_CATALOG: Record<CoreLocale, Record<string, string>> = {
     "pj_failed": "Nicht gebaut",
     "pj_busy": "Für dieses Dashboard läuft gerade ein anderer Bau (seit {minutes} min). Bitte kurz warten und erneut versuchen.",
     "pj_error_network": "Verbindung abgebrochen. Der Bau läuft möglicherweise weiter — das Dashboard meldet sich, wenn die Seite da ist.",
+    "pj_toast_started": "Wird im Hintergrund gebaut, das dauert zwei bis vier Minuten. Du kannst weiterarbeiten — das Dashboard meldet sich, wenn es fertig ist.",
+    "pj_toast_error_hint_flow": "Unter „Abläufe verwalten“ kannst du es erneut versuchen.",
+    "pj_toast_error_hint_public": "Unter „Seiten verwalten“ kannst du es erneut versuchen.",
     "load_error_title": "Fehler beim Laden",
     "retry": "Erneut versuchen",
     "data_load_failed": "Fehler beim Laden der Daten",
@@ -905,6 +909,7 @@ export const UI_CATALOG: Record<CoreLocale, Record<string, string>> = {
     "ppa_can_submit": "submit entries",
     "ppa_can_view": "see this data",
     "ppa_cannot_line": "see or change existing data.",
+    "ppa_cannot_change_line": "change or delete existing data.",
     "ppa_cancel": "Cancel",
     "ppa_confirm_publish": "Publish",
     "ps_preview_banner": "Preview — only you can see this page. Submitting creates a real record.",
@@ -964,6 +969,9 @@ export const UI_CATALOG: Record<CoreLocale, Record<string, string>> = {
     "pj_failed": "Not built",
     "pj_busy": "Another build is running for this dashboard (for {minutes} min). Please wait a moment and try again.",
     "pj_error_network": "Connection lost. The build may still be running — the dashboard tells you when the page is there.",
+    "pj_toast_started": "Building in the background, this takes two to four minutes. Keep working — the dashboard tells you when it is done.",
+    "pj_toast_error_hint_flow": "You can try again under “Manage flows”.",
+    "pj_toast_error_hint_public": "You can try again under “Manage pages”.",
     "load_error_title": "Error Loading",
     "retry": "Try Again",
     "data_load_failed": "Failed to load data",
@@ -1404,7 +1412,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "krankenkasse": "Health Insurance",
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
-          "hausarzt": "Primary Care Physician",
+          "hausarzt": "General Practitioner",
           "notizen": "Notes (confidential)"
         },
         "lookups": {
@@ -1461,7 +1469,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "ende": "End",
           "raum": "Room",
           "status": "Status",
-          "bemerkung": "Remarks"
+          "bemerkung": "Remark"
         },
         "lookups": {
           "raum": {
@@ -1484,10 +1492,10 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "app_id": "6aa95b77462f272481f9faa1",
         "fields": {
           "termin": "Appointment",
-          "durchgefuehrte_leistung": "Service Rendered",
+          "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
           "befund": "Findings (confidential)",
-          "massnahmen": "Interventions",
+          "massnahmen": "Measures",
           "verlauf": "Progress",
           "naechste_schritte": "Next Steps"
         },

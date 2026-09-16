@@ -10,8 +10,8 @@ import DashboardReady from '@/pages/DashboardReady';
 import PublicPagesAdmin from '@/pages/PublicPagesAdmin';
 import IntentsAdmin from '@/pages/IntentsAdmin';
 // <custom:imports>
-const IntentNeuerTerminPage = lazy(() => import('@/pages/intents/NeuerTerminPage'));
 import { DashboardSkeleton } from '@/components/DashboardStates';
+const IntentNeuerTerminPage = lazy(() => import('@/pages/intents/NeuerTerminPage'));
 const IntentBehandlungDokumentierenPage = lazy(() => import('@/pages/intents/BehandlungDokumentierenPage'));
 const IntentRezeptErfassenPage = lazy(() => import('@/pages/intents/RezeptErfassenPage'));
 // </custom:imports>
