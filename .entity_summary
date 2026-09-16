@@ -65,14 +65,14 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   ≡ 3 records at build time
   ⚙ getLeistungen() · getLeistungenEntry(id) · createLeistungenEntry(fields) · updateLeistungenEntry(id, fields) · deleteLeistungenEntry(id) · queryLeistungen({ filter, orderby, limit, offset, fields }) · countLeistungen(filter?)
 - Rezepte (rezepte): patient!^[applookup/select], ausstellungsdatum!^[date/date], arztpraxis!^[string/text] "Verordnende Arztpraxis", diagnose^[string/textarea], leistung!^[applookup/select], anzahl_einheiten![number] "Anzahl verordnete Einheiten", frequenz_pro_woche[number], gueltig_bis[date/date], status![lookup/select: offen|in_behandlung|abgeschlossen|abgelaufen]
-  ≡ 3 records at build time
+  ≡ 4 records at build time
   ◈ status → choice (4 options, ChoiceGroup) · patient → record (patienten, EntitySelectStep) · leistung → record (leistungen, EntitySelectStep)
   ⚙ getRezepte() · getRezepteEntry(id) · createRezepteEntry(fields) · updateRezepteEntry(id, fields) · deleteRezepteEntry(id) · queryRezepte({ filter, orderby, limit, offset, fields }) · countRezepte(filter?)
   ✚ EnrichedRezepte adds ONLY patientName, leistungName — via enrichRezepte(rezepte, { patientenMap, leistungenMap }), all maps required
   → patient links to app_id 6aa95b74c60e6bda746e344d
   → leistung links to app_id 6aa95b75670b3294bd74ce30
 - Termine (termine): patient!^[applookup/select], behandler!^[applookup/select], rezept^[applookup/select] "Rezept (optional)", beginn!^[date/datetimeminute] "Datum und Beginn", ende!^[date/datetimeminute], raum![lookup/select: raum_1|raum_2|raum_3|geraeteraum], status![lookup/select: geplant|bestaetigt|erschienen|nicht_erschienen|abgesagt], bemerkung[string/textarea]
-  ≡ 4 records at build time
+  ≡ 5 records at build time
   · beginn: A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`) The field value will be a string in the format `<YYYY>-<MM>-<DD>…
   · ende: A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`) The field value will be a string in the format `<YYYY>-<MM>-<DD>…
   ◈ beginn+ende → range candidate — YOU decide in .intents-staging/occupancy.json whether it is a stay, which applookup is the booked resource, which status keys do not occupy (AvailabilityRangePicker, form.range; blocked = occupancyFor()) · raum → choice (4 options, ChoiceGroup) · status → choice (5 options, ChoiceGroup) · patient → record (patienten, EntitySelectStep) · behandler → record (behandler, EntitySelectStep) · rezept → record (rezepte, EntitySelectStep)
@@ -82,7 +82,7 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   → behandler links to app_id 6aa95b6e0b2432073b6630bd
   → rezept links to app_id 6aa95b75b88c875aa3d69835
 - Behandlungen (behandlungen): termin!^[applookup/select], durchgefuehrte_leistung!^[applookup/select], dauer_tatsaechlich^[number] "Tatsächliche Dauer (Minuten)", befund^[string/textarea] "Befund (vertraulich)", massnahmen^[string/textarea], verlauf[string/textarea], naechste_schritte[string/textarea]
-  ≡ 4 records at build time
+  ≡ 5 records at build time
   ◈ termin → record (termine, EntitySelectStep) · durchgefuehrte_leistung → record (leistungen, EntitySelectStep)
   ⚙ getBehandlungen() · getBehandlungenEntry(id) · createBehandlungenEntry(fields) · updateBehandlungenEntry(id, fields) · deleteBehandlungenEntry(id) · queryBehandlungen({ filter, orderby, limit, offset, fields }) · countBehandlungen(filter?)
   ✚ EnrichedBehandlungen adds ONLY terminName, durchgefuehrte_leistungName — via enrichBehandlungen(behandlungen, { termineMap, leistungenMap }), all maps required
