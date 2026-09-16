@@ -20,6 +20,7 @@
 import type { ComponentType } from 'react';
 
 // <custom:intent-imports>
+import { IconCalendarPlus, IconClipboardList, IconFileText } from '@tabler/icons-react';
 // </custom:intent-imports>
 
 export interface IntentLink {
@@ -42,6 +43,9 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
+  { path: '/intents/neuer-termin', label: { de: 'Neuer Termin', en: 'New Appointment' }, icon: IconCalendarPlus, description: 'Termin in 4 Schritten anlegen: Patient, Behandler, Rezept und Zeitslot' },
+  { path: '/intents/behandlung-dokumentieren', label: { de: 'Behandlung dokumentieren', en: 'Document Treatment' }, icon: IconClipboardList, description: 'Behandlung zu einem Termin dokumentieren und Einheit verbuchen' },
+  { path: '/intents/rezept-erfassen', label: { de: 'Rezept erfassen', en: 'Record Prescription' }, icon: IconFileText, description: 'Neues Rezept für einen Patienten erfassen und einer Leistung zuordnen' },
   // </custom:intents>
 ];
 
@@ -52,7 +56,7 @@ export const INTENTS: IntentLink[] = [
  * purpose — a scaffold update resets it to false (self-healing if Phase 2
  * never ran).
  */
-export const INTENTS_PENDING = true;
+export const INTENTS_PENDING = false;
 
 /**
  * When the Phase-1 bundle was deployed (ISO, set by the service together with

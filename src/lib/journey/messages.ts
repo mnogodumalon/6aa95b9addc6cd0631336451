@@ -39,6 +39,12 @@ export type MessageFieldKey<E extends EntityKey> = E extends keyof MessageFields
 
 export const REQUIRED_MESSAGES: { [E in EntityKey]?: Partial<Record<MessageFieldKey<E>, string>> } = {
   // <custom:messages>
+  behandler: { vorname: "Bitte den Vornamen eingeben.", nachname: "Bitte den Nachnamen eingeben.", kuerzel: "Bitte ein Kürzel eingeben.", status: "Bitte den Status wählen." },
+  patienten: { vorname: "Bitte den Vornamen eingeben.", nachname: "Bitte den Nachnamen eingeben.", geburtsdatum: "Bitte das Geburtsdatum eingeben.", versicherungsart: "Bitte die Versicherungsart wählen." },
+  leistungen: { bezeichnung: "Bitte die Bezeichnung eingeben.", heilmittelkuerzel: "Bitte das Heilmittelkürzel eingeben.", dauer_minuten: "Bitte die Dauer in Minuten eingeben." },
+  rezepte: { patient: "Bitte einen Patienten auswählen.", ausstellungsdatum: "Bitte das Ausstellungsdatum wählen.", arztpraxis: "Bitte die verordnende Arztpraxis eingeben.", leistung: "Bitte eine Leistung auswählen.", anzahl_einheiten: "Bitte die Anzahl der verordneten Einheiten eingeben.", status: "Bitte den Status wählen." },
+  termine: { patient: "Bitte einen Patienten auswählen.", behandler: "Bitte einen Behandler auswählen.", beginn: "Bitte Datum und Uhrzeit des Termins wählen.", ende: "Bitte das Ende des Termins wählen.", raum: "Bitte einen Raum wählen.", status: "Bitte den Status wählen." },
+  behandlungen: { termin: "Bitte den zugehörigen Termin wählen.", durchgefuehrte_leistung: "Bitte die durchgeführte Leistung wählen." },
   // </custom:messages>
 };
 
