@@ -122,7 +122,7 @@ export default function Terminanfrage() {
     {
       searchFields: ['vorname', 'nachname', 'kuerzel'],
       toItem: toBehandlerItem,
-      filter: "r.v_status == 'aktiv'",
+      filter: "r.v_status == 'aktiv'", /* i18n-exempt */
       where: r => fieldLookup(r, 'status')?.key === 'aktiv',
     },
   );
