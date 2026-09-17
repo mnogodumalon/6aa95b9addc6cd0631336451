@@ -138,11 +138,17 @@ export default function Terminanfrage() {
         primary: true,
         needs: ['patient'],
         link: { patient: 'patient' },
-        values: () => ({
+        values: (ctx) => ({
           behandler: selectedBehandlerId
             ? port!.ref(
                 page?.endpoints?.find(e => e.entity === 'behandler' && e.op === 'list')?.app_id ?? '',
                 selectedBehandlerId,
+              )
+            : undefined,
+          patient: ctx.done['patient']
+            ? port!.ref(
+                page?.endpoints?.find(e => e.entity === 'patienten' && e.op === 'create')?.app_id ?? '',
+                ctx.done['patient'].id,
               )
             : undefined,
         }),
@@ -226,6 +232,7 @@ export default function Terminanfrage() {
         {/* Schritt 2: Behandler wählen */}
         {step === 2 && (
           <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">{tx('Es werden nur aktuell aktive Behandler angezeigt.')}</p>
             <EntitySelectStep
               {...behandlerSearch.select}
               selectedId={selectedBehandlerId}

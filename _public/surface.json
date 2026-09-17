@@ -15,7 +15,9 @@
             "kuerzel",
             "status"
           ],
-          "scope_description": "Zeigt alle Behandler zur client-seitigen Filterung auf aktiv"
+          "scope": "r.v_status == 'aktiv'",
+          "scope_description": "zeigt nur Behandler mit Status aktiv",
+          "max_records": 50
         },
         {
           "entity": "patienten",
@@ -37,8 +39,7 @@
             "patient",
             "behandler",
             "beginn",
-            "bemerkung",
-            "status"
+            "bemerkung"
           ]
         }
       ]
