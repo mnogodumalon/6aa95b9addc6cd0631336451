@@ -1379,7 +1379,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "lookups": {
           "fachgebiete": {
             "manuelle_therapie": "Manual Therapy",
-            "krankengymnastik": "Physical Therapy",
+            "krankengymnastik": "Physiotherapy",
             "lymphdrainage": "Lymphatic Drainage",
             "massage": "Massage",
             "sportphysio": "Sports Physio"
@@ -1414,12 +1414,12 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "krankenkasse": "Health Insurance",
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
-          "hausarzt": "GP",
+          "hausarzt": "General Practitioner",
           "notizen": "Notes (confidential)"
         },
         "lookups": {
           "versicherungsart": {
-            "gesetzlich": "Public",
+            "gesetzlich": "Statutory",
             "privat": "Private",
             "selbstzahler": "Self-Pay"
           }
@@ -1432,7 +1432,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "bezeichnung": "Name",
           "heilmittelkuerzel": "Remedy Code",
           "dauer_minuten": "Duration (Minutes)",
-          "preis_kasse": "Price Public (€)",
+          "preis_kasse": "Price Statutory (€)",
           "preis_privat": "Price Private (€)"
         },
         "lookups": {}
@@ -1471,7 +1471,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "ende": "End",
           "raum": "Room",
           "status": "Status",
-          "bemerkung": "Note"
+          "bemerkung": "Remark"
         },
         "lookups": {
           "raum": {
@@ -1494,7 +1494,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "app_id": "6aa95b77462f272481f9faa1",
         "fields": {
           "termin": "Appointment",
-          "durchgefuehrte_leistung": "Service Rendered",
+          "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
           "befund": "Findings (confidential)",
           "massnahmen": "Measures",
