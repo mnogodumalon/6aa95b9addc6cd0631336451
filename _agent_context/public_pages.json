@@ -1,18 +1,4 @@
 {
   "version": 1,
-  "pages": [
-    {
-      "slug": "terminanfrage",
-      "type": "custom",
-      "entity": "termine",
-      "title": "Terminanfrage",
-      "published": true,
-      "fields": [
-        "patient",
-        "behandler",
-        "beginn",
-        "bemerkung"
-      ]
-    }
-  ]
+  "pages": []
 }

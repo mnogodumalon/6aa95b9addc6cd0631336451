@@ -335,6 +335,15 @@ function installDom(slug, onJsdomError) {
     if (d && ('value' in d || d.get)) mirror(k);
   }
   for (const k of ['localStorage', 'sessionStorage', 'location', 'history', 'getComputedStyle', 'requestAnimationFrame', 'cancelAnimationFrame']) mirror(k);
+  // Browser SDK integrations (e.g. Sentry BrowserSession) call
+  // globalThis.addEventListener directly (GLOBAL_OBJ = globalThis in their
+  // bundled form). jsdom's window inherits addEventListener but it is not an
+  // OWN property, so the loop above never mirrors it. Provide it explicitly so
+  // the SDK's document guard does not prevent the no-op path.
+  if (!('addEventListener' in globalThis)) {
+    define('addEventListener', win.addEventListener.bind(win));
+    define('removeEventListener', win.removeEventListener.bind(win));
+  }
   // Media queries: the DatePicker asks for '(pointer: coarse)' and renders a
   // native <input type="date"> when it matches — the branch a script can fill.
   const mm = (q) => ({ matches: /pointer:\s*coarse/.test(q), media: q, onchange: null, addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {}, dispatchEvent() { return false; } });
