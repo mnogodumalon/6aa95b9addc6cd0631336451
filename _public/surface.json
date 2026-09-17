@@ -1,48 +1,4 @@
 {
   "version": 1,
-  "pages": [
-    {
-      "slug": "terminanfrage",
-      "component": "Terminanfrage",
-      "title": "Terminanfrage",
-      "endpoints": [
-        {
-          "entity": "behandler",
-          "op": "list",
-          "fields": [
-            "vorname",
-            "nachname",
-            "kuerzel",
-            "status"
-          ],
-          "scope": "r.v_status == 'aktiv'",
-          "scope_description": "Zeigt nur Behandler mit Status aktiv",
-          "max_records": 100
-        },
-        {
-          "entity": "patienten",
-          "op": "create",
-          "fields": [
-            "vorname",
-            "nachname",
-            "geburtsdatum",
-            "telefon",
-            "email",
-            "krankenkasse",
-            "versicherungsart"
-          ]
-        },
-        {
-          "entity": "termine",
-          "op": "create",
-          "fields": [
-            "patient",
-            "behandler",
-            "beginn",
-            "bemerkung"
-          ]
-        }
-      ]
-    }
-  ]
+  "pages": []
 }
