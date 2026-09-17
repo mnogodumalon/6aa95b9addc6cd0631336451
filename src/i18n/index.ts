@@ -1414,12 +1414,12 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "krankenkasse": "Health Insurance",
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
-          "hausarzt": "General Practitioner",
+          "hausarzt": "GP",
           "notizen": "Notes (Confidential)"
         },
         "lookups": {
           "versicherungsart": {
-            "gesetzlich": "Statutory",
+            "gesetzlich": "Public",
             "privat": "Private",
             "selbstzahler": "Self-Pay"
           }
@@ -1432,7 +1432,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "bezeichnung": "Name",
           "heilmittelkuerzel": "Remedy Code",
           "dauer_minuten": "Duration (Minutes)",
-          "preis_kasse": "Price Statutory (€)",
+          "preis_kasse": "Price Public (€)",
           "preis_privat": "Price Private (€)"
         },
         "lookups": {}
@@ -1497,7 +1497,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
           "befund": "Findings (Confidential)",
-          "massnahmen": "Measures",
+          "massnahmen": "Interventions",
           "verlauf": "Progress",
           "naechste_schritte": "Next Steps"
         },

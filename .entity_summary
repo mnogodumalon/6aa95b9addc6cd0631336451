@@ -58,7 +58,7 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   ◈ status → choice (3 options, ChoiceGroup)
   ⚙ getBehandler() · getBehandlerEntry(id) · createBehandlerEntry(fields) · updateBehandlerEntry(id, fields) · deleteBehandlerEntry(id) · queryBehandler({ filter, orderby, limit, offset, fields }) · countBehandler(filter?)
 - Patienten (patienten): vorname!^[string/text], nachname!^[string/text], geburtsdatum!^[date/date], telefon^[string/tel], email^[string/email] "E-Mail", strasse[string/text], hausnummer[string/text], plz[string/text] "Postleitzahl", ort[string/text], krankenkasse[string/text], versichertennummer[string/text], versicherungsart![lookup/radio: gesetzlich|privat|selbstzahler], hausarzt[string/text], notizen[string/textarea] "Notizen (vertraulich)"
-  ≡ 6 records at build time
+  ≡ 7 records at build time
   ◈ versicherungsart → choice (3 options, ChoiceGroup)
   ⚙ getPatienten() · getPatientenEntry(id) · createPatientenEntry(fields) · updatePatientenEntry(id, fields) · deletePatientenEntry(id) · queryPatienten({ filter, orderby, limit, offset, fields }) · countPatienten(filter?)
 - Leistungen (leistungen): bezeichnung!^[string/text], heilmittelkuerzel!^[string/text], dauer_minuten!^[number], preis_kasse^[number], preis_privat^[number]
@@ -72,7 +72,7 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   → patient links to app_id 6aa95b74c60e6bda746e344d
   → leistung links to app_id 6aa95b75670b3294bd74ce30
 - Termine (termine): patient!^[applookup/select], behandler!^[applookup/select], rezept^[applookup/select] "Rezept (optional)", beginn!^[date/datetimeminute] "Datum und Beginn", ende!^[date/datetimeminute], raum![lookup/select: raum_1|raum_2|raum_3|geraeteraum], status![lookup/select: geplant|bestaetigt|erschienen|nicht_erschienen|abgesagt], bemerkung[string/textarea]
-  ≡ 7 records at build time
+  ≡ 8 records at build time
   · beginn: A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`) The field value will be a string in the format `<YYYY>-<MM>-<DD>…
   · ende: A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`) The field value will be a string in the format `<YYYY>-<MM>-<DD>…
   ◈ beginn+ende → range candidate — YOU decide in .intents-staging/occupancy.json whether it is a stay, which applookup is the booked resource, which status keys do not occupy (AvailabilityRangePicker, form.range; blocked = occupancyFor()) · raum → choice (4 options, ChoiceGroup) · status → choice (5 options, ChoiceGroup) · patient → record (patienten, EntitySelectStep) · behandler → record (behandler, EntitySelectStep) · rezept → record (rezepte, EntitySelectStep)
