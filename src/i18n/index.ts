@@ -1379,7 +1379,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "lookups": {
           "fachgebiete": {
             "manuelle_therapie": "Manual Therapy",
-            "krankengymnastik": "Physiotherapy",
+            "krankengymnastik": "Physical Therapy",
             "lymphdrainage": "Lymphatic Drainage",
             "massage": "Massage",
             "sportphysio": "Sports Physio"
@@ -1393,7 +1393,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           },
           "status": {
             "aktiv": "Active",
-            "urlaub": "Vacation",
+            "urlaub": "On Leave",
             "krank": "Sick"
           }
         }
@@ -1494,7 +1494,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "app_id": "6aa95b77462f272481f9faa1",
         "fields": {
           "termin": "Appointment",
-          "durchgefuehrte_leistung": "Service Performed",
+          "durchgefuehrte_leistung": "Service Rendered",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
           "befund": "Findings (confidential)",
           "massnahmen": "Measures",
