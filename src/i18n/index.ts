@@ -1415,11 +1415,11 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
           "hausarzt": "GP",
-          "notizen": "Notes (Confidential)"
+          "notizen": "Notes (confidential)"
         },
         "lookups": {
           "versicherungsart": {
-            "gesetzlich": "Public",
+            "gesetzlich": "Statutory",
             "privat": "Private",
             "selbstzahler": "Self-Pay"
           }
@@ -1432,7 +1432,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "bezeichnung": "Name",
           "heilmittelkuerzel": "Remedy Code",
           "dauer_minuten": "Duration (Minutes)",
-          "preis_kasse": "Price Public (€)",
+          "preis_kasse": "Price Statutory (€)",
           "preis_privat": "Price Private (€)"
         },
         "lookups": {}
@@ -1466,12 +1466,12 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "fields": {
           "patient": "Patient",
           "behandler": "Therapist",
-          "rezept": "Prescription (Optional)",
+          "rezept": "Prescription (optional)",
           "beginn": "Date and Start",
           "ende": "End",
           "raum": "Room",
           "status": "Status",
-          "bemerkung": "Remarks"
+          "bemerkung": "Note"
         },
         "lookups": {
           "raum": {
@@ -1496,7 +1496,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "termin": "Appointment",
           "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
-          "befund": "Findings (Confidential)",
+          "befund": "Findings (confidential)",
           "massnahmen": "Interventions",
           "verlauf": "Progress",
           "naechste_schritte": "Next Steps"

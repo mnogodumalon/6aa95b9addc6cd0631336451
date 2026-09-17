@@ -102,7 +102,7 @@ export default function Terminanfrage() {
     'behandler',
     {
       searchFields: ['vorname', 'nachname'],
-      filter: "r.v_status == 'aktiv'",
+      filter: "r.v_status == 'aktiv'", /* i18n-exempt */
       toItem: (r: JourneyRecord): BehandlerItem => ({
         id: r.id,
         title: `${r.fields.vorname as string} ${r.fields.nachname as string}`,
