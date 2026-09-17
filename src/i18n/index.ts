@@ -1393,7 +1393,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           },
           "status": {
             "aktiv": "Active",
-            "urlaub": "On Leave",
+            "urlaub": "Vacation",
             "krank": "Sick"
           }
         }
@@ -1419,7 +1419,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         },
         "lookups": {
           "versicherungsart": {
-            "gesetzlich": "Statutory",
+            "gesetzlich": "Public",
             "privat": "Private",
             "selbstzahler": "Self-Pay"
           }
@@ -1432,7 +1432,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "bezeichnung": "Name",
           "heilmittelkuerzel": "Remedy Code",
           "dauer_minuten": "Duration (Minutes)",
-          "preis_kasse": "Price Statutory (€)",
+          "preis_kasse": "Price Public (€)",
           "preis_privat": "Price Private (€)"
         },
         "lookups": {}
@@ -1497,7 +1497,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
           "befund": "Findings (confidential)",
-          "massnahmen": "Interventions",
+          "massnahmen": "Measures",
           "verlauf": "Progress",
           "naechste_schritte": "Next Steps"
         },
