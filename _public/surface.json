@@ -1,4 +1,47 @@
 {
   "version": 1,
-  "pages": []
+  "pages": [
+    {
+      "slug": "terminanfrage",
+      "component": "Terminanfrage",
+      "title": "Terminanfrage",
+      "endpoints": [
+        {
+          "entity": "behandler",
+          "op": "list",
+          "fields": [
+            "vorname",
+            "nachname",
+            "kuerzel",
+            "status"
+          ],
+          "scope_description": "Zeigt alle Behandler zur client-seitigen Filterung auf aktiv"
+        },
+        {
+          "entity": "patienten",
+          "op": "create",
+          "fields": [
+            "vorname",
+            "nachname",
+            "geburtsdatum",
+            "telefon",
+            "email",
+            "krankenkasse",
+            "versicherungsart"
+          ]
+        },
+        {
+          "entity": "termine",
+          "op": "create",
+          "fields": [
+            "patient",
+            "behandler",
+            "beginn",
+            "bemerkung",
+            "status"
+          ]
+        }
+      ]
+    }
+  ]
 }
