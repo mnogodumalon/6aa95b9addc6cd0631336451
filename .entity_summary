@@ -58,7 +58,7 @@ createRecordUrl from the service. Note the lowercase `l` in the service path.
   ◈ status → choice (3 options, ChoiceGroup)
   ⚙ getBehandler() · getBehandlerEntry(id) · createBehandlerEntry(fields) · updateBehandlerEntry(id, fields) · deleteBehandlerEntry(id) · queryBehandler({ filter, orderby, limit, offset, fields }) · countBehandler(filter?)
 - Patienten (patienten): vorname!^[string/text], nachname!^[string/text], geburtsdatum!^[date/date], telefon^[string/tel], email^[string/email] "E-Mail", strasse[string/text], hausnummer[string/text], plz[string/text] "Postleitzahl", ort[string/text], krankenkasse[string/text], versichertennummer[string/text], versicherungsart![lookup/radio: gesetzlich|privat|selbstzahler], hausarzt[string/text], notizen[string/textarea] "Notizen (vertraulich)"
-  ≡ 5 records at build time
+  ≡ 6 records at build time
   ◈ versicherungsart → choice (3 options, ChoiceGroup)
   ⚙ getPatienten() · getPatientenEntry(id) · createPatientenEntry(fields) · updatePatientenEntry(id, fields) · deletePatientenEntry(id) · queryPatienten({ filter, orderby, limit, offset, fields }) · countPatienten(filter?)
 - Leistungen (leistungen): bezeichnung!^[string/text], heilmittelkuerzel!^[string/text], dauer_minuten!^[number], preis_kasse^[number], preis_privat^[number]

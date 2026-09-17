@@ -1393,7 +1393,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           },
           "status": {
             "aktiv": "Active",
-            "urlaub": "Vacation",
+            "urlaub": "On Leave",
             "krank": "Sick"
           }
         }
@@ -1414,12 +1414,12 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "krankenkasse": "Health Insurance",
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
-          "hausarzt": "GP",
-          "notizen": "Notes (confidential)"
+          "hausarzt": "General Practitioner",
+          "notizen": "Notes (Confidential)"
         },
         "lookups": {
           "versicherungsart": {
-            "gesetzlich": "Public",
+            "gesetzlich": "Statutory",
             "privat": "Private",
             "selbstzahler": "Self-Pay"
           }
@@ -1432,7 +1432,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "bezeichnung": "Name",
           "heilmittelkuerzel": "Remedy Code",
           "dauer_minuten": "Duration (Minutes)",
-          "preis_kasse": "Price Public (€)",
+          "preis_kasse": "Price Statutory (€)",
           "preis_privat": "Price Private (€)"
         },
         "lookups": {}
@@ -1466,12 +1466,12 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "fields": {
           "patient": "Patient",
           "behandler": "Therapist",
-          "rezept": "Prescription (optional)",
+          "rezept": "Prescription (Optional)",
           "beginn": "Date and Start",
           "ende": "End",
           "raum": "Room",
           "status": "Status",
-          "bemerkung": "Note"
+          "bemerkung": "Remarks"
         },
         "lookups": {
           "raum": {
@@ -1494,9 +1494,9 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "app_id": "6aa95b77462f272481f9faa1",
         "fields": {
           "termin": "Appointment",
-          "durchgefuehrte_leistung": "Service Rendered",
+          "durchgefuehrte_leistung": "Service Performed",
           "dauer_tatsaechlich": "Actual Duration (Minutes)",
-          "befund": "Findings (confidential)",
+          "befund": "Findings (Confidential)",
           "massnahmen": "Measures",
           "verlauf": "Progress",
           "naechste_schritte": "Next Steps"
