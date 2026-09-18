@@ -178,9 +178,12 @@ export default function PublicPageFields() {
 
   const summaryOf = (entity: string, rows: PolicyRow[]): string => {
     let visible = 0, required = 0, hidden = 0, fixed = 0;
-    for (const row of rows.filter(r => r.declared)) {
+    for (const row of rows) {
       const rule = ruleOf(entity, row.key);
+      // A fixed value counts whether or not the page asks for the field —
+      // the owner set it, the server writes it.
       if (isFixed(rule)) fixed++;
+      else if (!row.declared) continue;
       else if (rule.hidden) hidden++;
       else { visible++; if (rule.required ?? row.required_platform) required++; }
     }

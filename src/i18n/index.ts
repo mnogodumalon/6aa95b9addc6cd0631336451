@@ -1492,7 +1492,7 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
           "krankenkasse": "Health Insurance",
           "versichertennummer": "Insurance Number",
           "versicherungsart": "Insurance Type",
-          "hausarzt": "GP",
+          "hausarzt": "General Practitioner",
           "notizen": "Notes (confidential)"
         },
         "lookups": {

@@ -11,7 +11,7 @@
  *
  *   useStepForm — hidden keys leave `keys` (not validated, not summarised,
  *                 not in payload()), `required` overrides win;
- *   Field/Bound — a hidden field renders nothing;
+ *   Field/Bound — a hidden or fixed field renders nothing;
  *   labelOf     — the owner's label wins over bundle and rule;
  *   IntentWizardShell — a step whose fields are all hidden is skipped.
  *
@@ -22,6 +22,8 @@ export interface FieldPolicyRule {
   hidden?: boolean;
   required?: boolean;
   label?: string;
+  /** The owner's fixed value — the server presets it, the visitor never sees the field. */
+  fixed?: unknown;
 }
 
 export type FieldPolicy = Record<string, Record<string, FieldPolicyRule>>;
@@ -43,8 +45,13 @@ export function fieldPolicy(entity: string, key: string): FieldPolicyRule {
   return registry[entity]?.[key] ?? {};
 }
 
+/** True when the visitor must not see the field: hidden by the owner, or
+ *  given a fixed value (the field left the grant; the server fills it in). */
 export function isHiddenByPolicy(entity: string, key: string): boolean {
-  return Boolean(registry[entity]?.[key]?.hidden);
+  const rule = registry[entity]?.[key];
+  if (!rule) return false;
+  if (rule.hidden) return true;
+  return rule.fixed !== undefined && rule.fixed !== null && rule.fixed !== '';
 }
 
 export function policyLabel(entity: string, key: string): string | undefined {
